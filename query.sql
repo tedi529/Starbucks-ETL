@@ -1,18 +1,22 @@
 -- Create tables for raw data to be loaded into
 CREATE TABLE store_location(
-    store_number INT PRIMARY KEY,
+    store_number VARCHAR(50) PRIMARY KEY,
     store_name TEXT,
     street_address TEXT,
     city TEXT,
     state TEXT,
     country TEXT,
-    zipcode INT,
+    zipcode VARCHAR(5),
     longitude INT,
     latitude INT
 );
 
 CREATE TABLE store_city(
-    store_number INT PRIMARY KEY,
+    store_number VARCHAR(50)
+    
+    
+    
+     PRIMARY KEY,
     city TEXT
 );
 
