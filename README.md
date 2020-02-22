@@ -1,4 +1,4 @@
-Starbucks Location API 
+<h1> Starbucks Location API </h> 
 
 We propose using the ETL process to extract Starbuck’s coffee chain locations and store them into a Postgres Database.  
 
