@@ -16,10 +16,7 @@ CREATE TABLE store_city(
     city TEXT
 );
 
-ALTER TABLE store_location CONSTRAINT fk_store_number FOREIGN KEY (store_number)
-REFERENCES store_city(store_number);
-
-ALTER TABLE store_city CONSTRAINT fk_store_number FOREIGN KEY (store_number)
+ALTER TABLE store_city ADD CONSTRAINT fk_store_number FOREIGN KEY (store_number)
 REFERENCES store_location(store_number);
 
 -- Joins tables
