@@ -1,30 +1,34 @@
--- Create tables for raw data to be loaded into
-CREATE TABLE store_location(
-    store_number VARCHAR(50) PRIMARY KEY,
-    store_name TEXT,
-    street_address TEXT,
-    city TEXT,
-    state TEXT,
-    country TEXT,
-    zipcode VARCHAR(5),
-    longitude INT,
-    latitude INT
-);
-
-CREATE TABLE store_city(
-    store_number VARCHAR(50)
-    
-    
-    
-     PRIMARY KEY,
-    city TEXT
-);
-
-ALTER TABLE store_city ADD CONSTRAINT fk_store_number FOREIGN KEY (store_number)
-REFERENCES store_location(store_number);
-
 -- Joins tables
-SELECT store_location.store_number, store_location.store_name, store_location.street_address, store_city.city, store_location.state, store_location.zipcode
-FROM store_location
-JOIN store_city
-ON store_location.store_number = store_city.store_number;
+SELECT l.store_number, l.store_name, l.street_address, l.city, c.citipy_city, c.reverse_geocoder_city,l.state, l.zipcode,l.latitude,l.longitude
+FROM store_location l
+JOIN store_city c
+ON l.store_number = c.store_number;
+
+-- find city = citipy_city
+SELECT l.store_number, l.store_name, l.street_address, l.city, c.citipy_city, c.reverse_geocoder_city, l.state, l.zipcode,l.latitude,l.longitude
+FROM store_location l
+JOIN store_city c
+ON l.store_number = c.store_number
+WHERE l.city = c.citipy_city
+
+-- find city = reverse_geocoder_city
+SELECT l.store_number, l.store_name, l.street_address, l.city, c.citipy_city, c.reverse_geocoder_city, l.state, l.zipcode,l.latitude,l.longitude
+FROM store_location l
+JOIN store_city c
+ON l.store_number = c.store_number
+WHERE l.city = c.reverse_geocoder_city
+
+-- find deltas
+SELECT l.store_number, l.store_name, l.street_address, l.city, c.citipy_city, c.reverse_geocoder_city, l.state, l.zipcode,l.latitude,l.longitude
+FROM store_location l
+JOIN store_city c
+ON l.store_number = c.store_number
+WHERE (l.city <> c.reverse_geocoder_city  OR
+	   l.city <> c.citipy_city)
+	   
+SELECT l.store_number, l.store_name, l.street_address, l.city, c.citipy_city, c.reverse_geocoder_city, l.state, l.zipcode,l.latitude,l.longitude
+FROM store_location l
+JOIN store_city c
+ON l.store_number = c.store_number
+WHERE (l.city <> c.reverse_geocoder_city  AND
+	   l.city <> c.citipy_city)	   
