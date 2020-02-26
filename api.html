@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StarBucks</title>
+    <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
@@ -19,31 +19,19 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-                </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/api/json">API</a>
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/api">API <span class="sr-only">(current)</span></a>
                 </li>
             </ul>
         </div>
     </nav>
     <div class="container">
-        <div class="jumbotron">Starbucks Locator</div>
-        <div class="row">
-            <div class="col-12">
-                <a href="/api/">Select City and State</a>
-                <ol>
-                    <li>
-                        <strong><p>Welcome to the US Starbucks Locations API!<br/>
-                            <br/>
-                            You can use this API to query city, state combinations in the United States and return the address of every Starbucks in that city!<br/>"
-                            <br/>
-                            Specify a city and state in the format above when executing API to return the address of all Starbucks' in your city.<br/></p>id</strong> 
-                    </li>
-                </ol>
-            </div>
-        </div>
+        <pre>
+            {{ data }}
+        </pre>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
