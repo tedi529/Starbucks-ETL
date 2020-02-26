@@ -28,7 +28,7 @@ engine = create_engine(postgres_str)
 def welcome():
     return render_template("index.html")
 
-@app.route("/<city>/<state>")
+@app.route("/api/<city>/<state>")
 def address_output(city, state):
     # Create session link from Python to database
     session = Session(engine)   
@@ -44,7 +44,10 @@ def address_output(city, state):
                                     AND UPPER(l.state) = UPPER('{state}');''', engine)
 
     session.close()
-    return results.to_json()
+    return jsonify(results.to_dict (orient='records'))
+
+    return render_template("api.html",results=results)
+
 
 if __name__ == "__main__":
     app.run(debug=True)
