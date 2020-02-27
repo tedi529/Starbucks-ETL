@@ -1,0 +1,142 @@
+body {
+    height: 100%;
+    margin: 50;
+    background-color: #DFECE5;
+    color: rgba(0,0,0,.87);
+    font-family: SoDoSans,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    letter-spacing: -.01em;}
+    
+    h1 {
+    
+        font-size: 40px;
+        color: #DFECE5;
+        
+        
+        }  
+        h2 {
+    
+            font-size: 30px;
+            color: darkgrey;
+            
+            
+            }
+          
+        p{
+        
+        font-size: 25px;
+        color: white;
+        }  
+ 
+    .jumbotron {
+    
+    background-color:#006241;
+     text-align: justify;
+    padding: 15px;
+
+    }
+
+    .sb-button--default{
+        color: #DFECE5;
+
+    }
+
+        .sb-button {
+            display: inline-block;
+            background: none;
+            border-style: solid;
+            border-width: 1px;
+            border-radius: 50px;
+            position: center;
+            padding: 7px 16px;
+            font-size: 14px;
+            font-size: 1.4rem;
+            font-weight: 600;
+            line-height: 1.2;
+            text-align: center;
+            text-decoration: none;
+            transition: all .2s ease;
+        }
+
+        .mt5 {
+            margin-top: 3.2rem!important;
+        }
+
+
+        /* Adding media queries to show the drop-down, and hide the navbar when the screen is smaller than 480 pixels */
+    
+    @media (max-width: 480px) {
+    
+    .navbar li {
+    
+    padding: 10px;
+    
+    }
+    
+    .box {
+    
+    margin-right: 20px;
+    
+    margin-left: 20px;
+    
+    }
+    
+    .navbar ul {
+    
+    visibility: hidden;
+    
+    }
+    
+    #nav-select {
+    
+    visibility: visible;
+    
+    }
+    
+    }
+    
+    
+    
+    /* For desktop: */
+    
+    .col-1 {width: 8.33%;}
+    
+    .col-2 {width: 16.66%;}
+    
+    .col-3 {width: 25%;}
+    
+    .col-4 {width: 33.33%;}
+    
+    .col-5 {width: 41.66%;}
+    
+    .col-6 {width: 50%;}
+    
+    .col-7 {width: 58.33%;}
+    
+    .col-8 {width: 66.66%;}
+    
+    .col-9 {width: 75%;}
+    
+    .col-10 {width: 83.33%;}
+    
+    .col-11 {width: 91.66%;}
+    
+    .col-12 {width: 100%;}
+    
+    
+    
+    @media only screen and (max-width: 768px) {
+    
+    /* For mobile phones: */
+    
+    [class*="col-"] {
+    
+    width: 100%;
+    
+    }
+    
+    }  
+
+
