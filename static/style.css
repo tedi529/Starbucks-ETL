@@ -1,6 +1,6 @@
 body {
     height: 100%;
-    margin: 0;
+    margin: 50;
     background-color: #DFECE5;
     color: rgba(0,0,0,.87);
     font-family: SoDoSans,Helvetica Neue,Helvetica,Arial,sans-serif;
@@ -8,27 +8,34 @@ body {
     font-size: 1.4rem;
     line-height: 1.5;
     letter-spacing: -.01em;}
-      
+    
     h1 {
     
-    font-size: 40px;
-    color: #DFECE5;
+        font-size: 40px;
+        color: #DFECE5;
+        
+        
+        }  
+        h2 {
     
-    }
-      
-    p{
-    
-    font-size: 20px;
-    color: #DFECE5;
-    }
-    
+            font-size: 30px;
+            color: darkgrey;
+            
+            
+            }
+          
+        p{
+        
+        font-size: 25px;
+        color: white;
+        }  
  
     .jumbotron {
     
     background-color:#006241;
-    text-align: center;
+     text-align: justify;
     padding: 15px;
-    
+
     }
 
     .sb-button--default{
@@ -42,6 +49,7 @@ body {
             border-style: solid;
             border-width: 1px;
             border-radius: 50px;
+            position: center;
             padding: 7px 16px;
             font-size: 14px;
             font-size: 1.4rem;

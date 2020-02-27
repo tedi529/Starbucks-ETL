@@ -28,17 +28,34 @@
             </ul>
         </div>
     </nav>
-    <div class="content">
-            <div class="jumbotron">
-            <h1 class="display-4">Welcome to the US Starbucks Locations API</h1>
-            <p class="lead">This demo will return all Starbucks stores located in Miami, Florida.</p>
+    <div class="content-fluid">
+         <div class="jumbotron">
+            <h1 class="display-4">API Documentation</h1>
+            <hr class="my-4">
+            <h2 class="display-6">Welcome to the US Starbucks Locations API</h2>
+            <hr class="my-4">
+            <p class="display-8">
+            <ul>
+                <li>When the User inputs a city and state this API will return addresses for 
+                    all Starbucks stores located in that city.  
+                    The returned object will be  a list of JSON objects.</li>
+                <li>URL routes:  /api/&ltcity&gt/&ltstate&gt</li>
+                <li>Method: Get</li>
+                <li>URL parameters:  City and State.  Both are required.</li>
+                <li>Error Resonses:</li>
+                    <ul>
+                        <li>404 Code:  Page Not Found HTML opens.</li>
+                        <li>500 Code:  500 Error HTML opens.</li>
+                    </ul>
+                <li>The demo will return all Starbucks stores located in Miami, Florida</li></p>
+            </ul>         
+          
             <hr class="my-4">
             <p class="lead">
               <a class="sb-button sb-button--default mt5" style="min-width: 50px; min-height:  50px;" href="./api/Miami/FL" >API DEMO</a>
             </p>
         </div>
-
-    </div>
+     </div>
     <div class="container">
         <div class="row">
                 <div class="col-sm-12"></div>

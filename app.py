@@ -48,6 +48,16 @@ def address_output(city, state):
 
     return render_template("api.html",results=results)
 
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
+
+@app.errorhandler(500)
+def handle_exception(e):
+    if isinstance(e, HTTPException):
+        return e
+    return render_template('500.html'), 500
+
 
 if __name__ == "__main__":
     app.run(debug=True)
