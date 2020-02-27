@@ -8,4 +8,5 @@ The following is the Welcome Page of the Flask API.
 <img src ="https://github.com/tedi529/ETL-Project/blob/master/Demo%20Screenshots/landing.PNG"> 
 
 The following are screenshots of the outputs of our API passing in the cities of Miami, Florida and Tempe, Arizona.
+
 <img src ="https://github.com/tedi529/ETL-Project/blob/master/Demo%20Screenshots/API_output.PNG"> 
